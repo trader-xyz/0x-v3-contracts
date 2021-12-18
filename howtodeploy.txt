@@ -1,0 +1,1 @@
+packages/migrations/bin/0x-migrate.js --rpc-url 'https://testnet2.matic.network' --from $DeployAddress --pk $PrivatekeyForDeployAddress
