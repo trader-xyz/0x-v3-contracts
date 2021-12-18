@@ -270,7 +270,7 @@ export async function runMigrationsAsync(
     await stakingProxy.addAuthorizedAddress(txDefaults.from).awaitTransactionSuccessAsync(txDefaults);
     await stakingDel.addExchangeAddress(exchange.address).awaitTransactionSuccessAsync(txDefaults);
     await exchange.setProtocolFeeCollectorAddress(stakingProxy.address).awaitTransactionSuccessAsync(txDefaults);
-    await exchange.setProtocolFeeMultiplier(new BigNumber(70000)).awaitTransactionSuccessAsync(txDefaults);
+    await exchange.setProtocolFeeMultiplier(new BigNumber(0)).awaitTransactionSuccessAsync(txDefaults);
 
     await zrxVault.addAuthorizedAddress(txDefaults.from).awaitTransactionSuccessAsync(txDefaults);
     await zrxVault.setStakingProxy(stakingProxy.address).awaitTransactionSuccessAsync(txDefaults);
