@@ -270,6 +270,7 @@ contract Forwarder is
         wethRemaining = wethRemaining.safeSub(wethSpentAmount);
 
         // Refund remaining ETH to msg.sender.
-        _unwrapAndTransferEth(wethRemaining);
+        // FIX(johnrjj) - Support MultiAsset Proxy
+        _unwrapAndTransferEth(WETH.balanceOf(address(this)));
     }
 }
